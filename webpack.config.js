@@ -34,6 +34,10 @@ module.exports = {
                 use:['style-loader','css-loader']
             },
             {
+                test:/\.scss$/,
+                use:['style-loader','css-loader','sass-loader']
+            },
+            {
                 test:/\.(ttf|eot|svg|woff|woff2|otf)$/,
                 use:'url-loader'
             },
@@ -45,6 +49,18 @@ module.exports = {
             {
                 test:/\.vue$/,
                 use:'vue-loader'
+            },
+            {
+                test:/\.(png|jpg|gif)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        esModule: false, // 这里设置为false
+                        name: '[name].[ext]',
+                        limit: 10240
+                    }
+                }]
+                
             }
         ]
     },
