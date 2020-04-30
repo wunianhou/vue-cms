@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mint-ui": "^2.2.13",
     "popper.js": "^1.16.0",
     "vue": "^2.6.11",
